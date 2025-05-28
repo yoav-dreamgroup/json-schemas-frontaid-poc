@@ -1,10 +1,12 @@
 {
   "contentDir": "schemas",
+  "schemaDir": "meta",
   "locales": ["en"],
   "projects": [
     {
       "label": "Activity Schema",
       "file": "activity.schema.json",
+      "schema": "json-schema-meta.json",
       "locale": "en"
     }
   ]
