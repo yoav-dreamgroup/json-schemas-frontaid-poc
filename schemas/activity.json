@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/activity.schema.json",
+  "title": "Activity",
+  "description": "Schema for an Activity record collected by a system.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "A unique identifier for the activity.",
+      "examples": ["a1b2c3d4"]
+    },
+    "timestamp": {
+      "type": "integer",
+      "description": "Unix timestamp representing when the activity occurred.",
+      "examples": [1652025600],
+      "minimum": 0
+    },
+    "collectorName": {
+      "type": "string",
+      "description": "The name of the system or user that collected this activity.",
+      "examples": ["sensor-01"]
+    },
+    "rawData": {
+      "type": "string",
+      "description": "The raw data payload collected for the activity.",
+      "examples": ["{\"sensor\": \"temp\", \"value\": 22.5}"]
+    }
+  },
+  "required": ["id", "timestamp", "collectorName", "rawData"],
+  "additionalProperties": false
+}
